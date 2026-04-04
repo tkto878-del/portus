@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портус - Двери</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Bar -->
+    <header class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="logo" onclick="app.navigate('home')">
+                <img src="assets/logo.png" alt="Портус Двери Logo">
+                <div class="logo-text">
+                    <span class="logo-title">Портус</span>
+                    <span class="logo-subtitle">Двери</span>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Поиск по сайту">
+            </div>
+
+            <div class="header-actions">
+                <a href="#" class="contact-btn">Связаться</a>
+                <div class="icon-btn" onclick="app.navigate('profile')">
+                    <img src="assets/icon-user.png" alt="Профиль">
+                </div>
+                <div class="icon-btn basket-wrapper" onclick="app.navigate('cart')">
+                    <img src="assets/icon-basket.png" alt="Корзина">
+                    <span class="basket-badge" id="basket-count">0</span>
+                </div>
+                <div class="icon-btn hamburger" onclick="app.toggleMenu()">
+                    <img src="assets/icon-menu.png" alt="Меню">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container nav-inner">
+            <ul class="nav-links">
+                <li><a href="javascript:void(0)" onclick="app.openCategory('Входные')">Входные</a></li>
+                <li><a href="javascript:void(0)" onclick="app.openCategory('Межкомнатные')">Межкомнатные</a></li>
+                <li><a href="javascript:void(0)" onclick="app.openCategory('Скрытые')">Скрытые</a></li>
+                <li><a href="javascript:void(0)" onclick="app.openCategory('Пожарные/технические')">Пожарные/технические</a></li>
+                <li><a href="javascript:void(0)" onclick="app.openCategory('Под заказ')">Под заказ</a></li>
+            </ul>
+            <div class="nav-phone">+7-995-592-66-70</div>
+        </div>
+    </nav>
+
+    <!-- Dynamic Content Area -->
+    <main id="app-content">
+        <!-- Views will be injected here via JS -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-inner">
+            <div class="footer-links-col">
+                <div class="footer-title">Портус - Двери</div>
+                <div class="footer-links-row">
+                    <div class="col">
+                        <a href="#">В начало</a>
+                        <a href="#">Возврат, обмен</a>
+                        <a href="#">Политика конфиденциальности</a>
+                        <a href="#">Контакты</a>
+                    </div>
+                    <div class="col pl">
+                        <a href="#">Доставка, оплата</a>
+                        <a href="#">Оферта</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-social-col">
+                <div class="social-box">
+                    <a href="#">VK</a>
+                    <a href="#">TG</a>
+                    <a href="#">TEL</a>
+                    <a href="#">MAIL</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Side Menu -->
+    <div class="side-menu-overlay" id="side-menu-overlay" onclick="app.toggleMenu()"></div>
+    <div class="side-menu" id="side-menu">
+        <div class="side-menu-close" onclick="app.toggleMenu()">✕</div>
+        <h2>Меню</h2>
+        <ul class="side-menu-links">
+            <li><a href="javascript:void(0)" onclick="app.openCategory('Входные'); app.toggleMenu()">Входные двери</a></li>
+            <li><a href="javascript:void(0)" onclick="app.openCategory('Межкомнатные'); app.toggleMenu()">Межкомнатные двери</a></li>
+            <li><a href="javascript:void(0)" onclick="app.openCategory('Скрытые'); app.toggleMenu()">Скрытые двери</a></li>
+            <li><a href="javascript:void(0)" onclick="app.openCategory('Пожарные/технические'); app.toggleMenu()">Технические двери</a></li>
+            <li><a href="javascript:void(0)" onclick="app.openCategory('Под заказ'); app.toggleMenu()">Под заказ</a></li>
+        </ul>
+        <hr>
+        <ul class="side-menu-info">
+            <li><a href="javascript:void(0)" onclick="app.toggleMenu()">Оферта</a></li>
+            <li><a href="javascript:void(0)" onclick="app.toggleMenu()">Доставка, оплата</a></li>
+            <li><a href="javascript:void(0)" onclick="app.toggleMenu()">Возврат и обмен</a></li>
+            <li><a href="javascript:void(0)" onclick="app.toggleMenu()">Политика конфиденциальности</a></li>
+            <li><a href="javascript:void(0)" onclick="app.toggleMenu()">Контакты</a></li>
+        </ul>
+        <hr>
+        <div class="side-menu-social">
+            <a href="#">VK</a>
+            <a href="#">TG</a>
+            <a href="#">TEL</a>
+            <a href="#">MAIL</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/store.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
